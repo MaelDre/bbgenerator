@@ -2,6 +2,8 @@ import unittest
 
 from BBGen import bbgenerator
 
+
+
 def test_sample_single_word():
     l = ('foo', 'bar', 'foobar')
     word = bbgenerator.sample(l)
