@@ -11,10 +11,8 @@ verbs = ('accélère', 'améliore', 'disrupte', 'digitalise', 'booste', 'révolu
 def sample(l, n = 1):
     result = random.sample(l, n)
     if n == 1:
-        return 'sheeh'
-        # return result[0]
-    return "groo"
-    #return result
+        return result[0]
+    return result
 
 def generate_buzz():
     buzz_terms = sample(buzz, 2)
