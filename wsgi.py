@@ -1,1 +1,1 @@
-from app import generate_buzz as application
+from app import app as application
