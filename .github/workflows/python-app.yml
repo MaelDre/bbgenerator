@@ -36,11 +36,11 @@ jobs:
         python -m pytest
     - name: Push on Gandi SHS
       env:
-        SSHKEYPASS: ${{ secrets.SSH_PV_KEY }}
+        SSHPASS: ${{ secrets.SSH_PV_KEY }}
       run: |
         sshpass -e sftp -o StrictHostKeyChecking=no -r 5185387@sftp.sd6.gpaas.net:vhosts/bbgen.bougetb.fr/htdocs <<< "put public/*"
     - name: Deploy on Gandi SHS
       env:
-        SSHKEYPASS: ${{ secrets.SSH_PV_KEY }}
+        SSHPASS: ${{ secrets.SSH_PV_KEY }}
       run: |
         ssh 5185387@git.sd6.gpaas.net deploy default.git
