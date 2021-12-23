@@ -35,8 +35,7 @@ jobs:
       run: | 
         python -m pytest
     - name: Push on Gandi SHS
-      run: 
-    
+      run: sshpass -e sftp -o StrictHostKeyChecking=no -r 5185387@sftp.sd6.gpaas.net:vhosts/http://bbgen.bougetb.fr/htdocs <<< "put public/*"
     - name: Deploy on Gandi SHS
       env:
         SSHKEYPASS: ${{ secrets.SSH_PV_KEY }}
