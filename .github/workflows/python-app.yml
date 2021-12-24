@@ -45,8 +45,10 @@ jobs:
         ssh-private-key: ${{ secrets.SSH_PV_KEY }}
         remote-path: "/vhosts/default"
     
-    - name: Deploy on Gandi SHS instances
-      env:
-        SSHPASS: ${{ secrets.SSH_PV_KEY }}
-      run: |
-        ssh 5185387@git.sd6.gpaas.net deploy default.git
+    - name: Deploy on Gandi SHS instances deploy git through ssh
+      uses: garygrossgarten/github-action-ssh@release
+      with:
+        command: deploy default.git
+        host: git.sd6.gpaas.net
+        username: 5185387
+        privateKey: ${{ secrets.SSH_PV_KEY}}
