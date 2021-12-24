@@ -35,10 +35,14 @@ jobs:
       run: | 
         python -m pytest
     - name: Push on Gandi SHS
+      uses: easingthemes/ssh-deploy@main
       env:
-        SSHPASS: ${{ secrets.SSH_PV_KEY }}
-      run: |
-        sshpass -e sftp -o "IdentityFile=$SSHPASS" 5185387@sftp.sd6.gpaas.net:vhosts/default
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PV_KEY }}
+          ARGS: "-rltgoDzvO --delete"
+          SOURCE: "tests/"
+          REMOTE_HOST: sftp.sd6.gpaas.net
+          REMOTE_USER: 5185387
+          TARGET: "vhosts/default"
     - name: Deploy on Gandi SHS instance
       env:
         SSHPASS: ${{ secrets.SSH_PV_KEY }}
