@@ -40,9 +40,11 @@ jobs:
       uses: milanmk/actions-file-deployer@master
       with:
         remote-protocol: "sftp"
+        sync: full
         remote-host: ${{ secrets.GANDI_SFTP_HOST }}
         remote-user: ${{ secrets.GANDI_SHS_USER }}
         ssh-private-key: ${{ secrets.SSH_PV_KEY }}
+      
         remote-path: "/vhosts/default"
     
     - name: Deploy on Gandi SHS instances deploy git through ssh
