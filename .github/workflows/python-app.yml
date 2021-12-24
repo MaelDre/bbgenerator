@@ -35,14 +35,14 @@ jobs:
       run: | 
         python -m pytest
     - name: Push on Gandi SHS instance
-      uses: easingthemes/ssh-deploy@main
-      env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PV_KEY }}
-          ARGS: "-rltgoDzvO --delete"
-          SOURCE: "tests/"
-          REMOTE_HOST: sftp.sd6.gpaas.net
-          REMOTE_USER: 5185387
-          TARGET: "vhosts/default"
+      uses: milanmk/actions-file-deployer@master
+      with:
+        remote-protocol: "sftp"
+        remote-host: "sftp.sd6.gpaas.net"
+        remote-user: "5185387"
+        ssh-private-key: ${{ secrets.SSH_PV_KEY }}
+        remote-path: "/vhosts/default"
+    
     - name: Deploy on Gandi SHS instances
       env:
         SSHPASS: ${{ secrets.SSH_PV_KEY }}
