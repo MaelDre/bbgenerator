@@ -43,7 +43,7 @@ jobs:
           REMOTE_HOST: sftp.sd6.gpaas.net
           REMOTE_USER: 5185387
           TARGET: "vhosts/default"
-    - name: Deploy on Gandi SHS instance
+    - name: Deploy on Gandi SHS instances
       env:
         SSHPASS: ${{ secrets.SSH_PV_KEY }}
       run: |
