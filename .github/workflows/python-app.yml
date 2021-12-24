@@ -34,7 +34,7 @@ jobs:
     - name: Test with pytest
       run: | 
         python -m pytest
-    - name: Push on Gandi SHS
+    - name: Push on Gandi SHS instance
       uses: easingthemes/ssh-deploy@main
       env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PV_KEY }}
