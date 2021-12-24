@@ -40,8 +40,8 @@ jobs:
       uses: milanmk/actions-file-deployer@master
       with:
         remote-protocol: "sftp"
-        remote-host: "sftp.sd6.gpaas.net"
-        remote-user: "5185387"
+        remote-host: ${{ secrets.GANDI_SFTP_HOST }}
+        remote-user: ${{ secrets.GANDI_SHS_USER }}
         ssh-private-key: ${{ secrets.SSH_PV_KEY }}
         remote-path: "/vhosts/default"
     
@@ -49,6 +49,6 @@ jobs:
       uses: garygrossgarten/github-action-ssh@release
       with:
         command: deploy default.git
-        host: git.sd6.gpaas.net
-        username: 5185387
+        host: ${{ secrets.GANDI_GIT_HOST }}
+        username: ${{ secrets.GANDI_SHS_USER }}
         privateKey: ${{ secrets.SSH_PV_KEY}}
