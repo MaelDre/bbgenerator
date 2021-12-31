@@ -1,8 +1,8 @@
 import os
-from flask import Flask
-from BBGen import bbgenerator
+#from flask import Flask
+#from BBGen import bbgenerator
 
-appli = Flask(__name__)
+#appli = Flask(__name__)
 
 
 def application(env, start_response):
@@ -13,13 +13,13 @@ def application(env, start_response):
 
 app = application()
 
-@appli.route("/")
-def generate_buzz():
-    page = '<html><body>'
-    page += '<h1>Bonjour tout le monde! La on va voir oupas</h1><h2>'
-    #page += bbgenerator.generate_buzz()
-    page += '</h2></body></html>'
-    return page
+#@appli.route("/")
+#def generate_buzz():
+#    page = '<html><body>'
+#    page += '<h1>Bonjour tout le monde! La on va voir oupas</h1><h2>'
+#    #page += bbgenerator.generate_buzz()
+#    page += '</h2></body></html>'
+#    return page
 
-if __name__ == "__main__":
-    appli.run(host='0.0.0.0', port=int(os.getenv('PORT', 5000)))
+#if __name__ == "__main__":
+#    appli.run(host='0.0.0.0', port=int(os.getenv('PORT', 5000)))
