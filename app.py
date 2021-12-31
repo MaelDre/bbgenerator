@@ -5,7 +5,7 @@ from BBGen import bbgenerator
 app = Flask(__name__)
 
 
-@appli.route("/")
+@app.route("/")
 def generate_buzz():
     page = '<html><body>'
     page += '<h1>Bonjour tout le monde! La on va voir oupas</h1><h2>'
@@ -14,4 +14,4 @@ def generate_buzz():
     return page
 
 if __name__ == "__main__":
-    appli.run(host='0.0.0.0', port=int(os.getenv('PORT', 5000)))
+    app.run(host='0.0.0.0', port=int(os.getenv('PORT', 5000)))
