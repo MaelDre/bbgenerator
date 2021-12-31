@@ -11,7 +11,7 @@ def application(env, start_response):
             '<title>It works</title><h1>It works!</h1>']
     return [line.encode('utf-8') for line in body]
 
-app = application()
+app = application
 
 #@appli.route("/")
 #def generate_buzz():
