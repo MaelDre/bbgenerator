@@ -2,7 +2,12 @@ import os
 from flask import Flask
 from BBGen import bbgenerator
 
-app = Flask(__name__)
+# app = Flask(__name__)
+def appli (env, start_response):
+    start_response('200 OK', [('Content-Type','text/html')])
+    body = ['<!DOCTYPE html><html><meta charset="utf-8">',
+            '<title>It works</title><h1>It works!</h1>']
+    return [line.encode('utf-8') for line in body]
 
 @app.route("/")
 def generate_buzz():
