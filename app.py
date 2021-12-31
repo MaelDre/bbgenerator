@@ -9,7 +9,7 @@ def appli (env, start_response):
             '<title>It works</title><h1>It works!</h1>']
     return [line.encode('utf-8') for line in body]
 
-@app.route("/")
+@appli.route("/")
 def generate_buzz():
     page = '<html><body>'
     page += '<h1>Bonjour tout le monde! La on va voir oupas</h1><h2>'
@@ -18,4 +18,4 @@ def generate_buzz():
     return page
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=int(os.getenv('PORT', 5000)))
+    appli.run(host='0.0.0.0', port=int(os.getenv('PORT', 5000)))
