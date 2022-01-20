@@ -39,7 +39,7 @@ jobs:
     - name: add remote repo
       run: git remote add gandi git+ssh://${{ secrets.GANDI_SHS_USER }}@${{ secrets.GANDI_GIT_HOST }}/default.git
     - name: Push on Gandi SHS instance
-      run: git push gandi main
+      run: git push gandi master
     - name: Deploy on Gandi SHS instances deploy git through ssh
       uses: garygrossgarten/github-action-ssh@release
       with:
