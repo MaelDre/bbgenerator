@@ -39,16 +39,7 @@ jobs:
     - name: add remote repo
       run: git remote add gandi git+ssh://${{ secrets.GANDI_SHS_USER }}@${{ secrets.GANDI_GIT_HOST }}/default.git
     - name: Push on Gandi SHS instance
-      uses: milanmk/actions-file-deployer@master
-      with:
-        remote-protocol: "sftp"
-        sync: full
-        remote-host: ${{ secrets.GANDI_SFTP_HOST }}
-        remote-user: ${{ secrets.GANDI_SHS_USER }}
-        ssh-private-key: ${{ secrets.SSH_PV_KEY }}
-      
-        remote-path: "/vhosts/default"
-    
+      run: git push gandi main
     - name: Deploy on Gandi SHS instances deploy git through ssh
       uses: garygrossgarten/github-action-ssh@release
       with:
