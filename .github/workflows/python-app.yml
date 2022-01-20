@@ -38,7 +38,6 @@ jobs:
         python -m pytest
     - name: add remote repo + Push on Gandi SHS instance
       run: |
-        git remote add gandi git+ssh://${{ secrets.GANDI_SHS_USER }}@${{ secrets.GANDI_GIT_HOST }}/default.git
         git push gandi main
     - name: Deploy on Gandi SHS instances deploy git through ssh
       uses: garygrossgarten/github-action-ssh@release
