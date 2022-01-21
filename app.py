@@ -8,7 +8,7 @@ app = Flask(__name__)
 def generate_buzz():
     page = '<html><body>'
     page += '<h1>Bonjour tout le monde! La on va voir oupas</h1><h2>'
-    #page += bbgenerator.generate_buzz()
+    page += bbgenerator.generate_buzz()
     page += '</h2></body></html>'
     return page
 
