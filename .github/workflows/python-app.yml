@@ -37,11 +37,11 @@ jobs:
       run: | 
         python -m pytest
     - name: Install SSH key
-      - uses: shimataro/ssh-key-action@v2
-        with:
-          key: ${{ secrets.SSH_PV_KEY }}
-          known_hosts: ${{ secrets.KNOWN_HOSTS }}
-          if_key_exists: fail # replace / ignore / fail; optional (defaults to fail)
+      uses: shimataro/ssh-key-action@v2
+      with:
+        key: ${{ secrets.SSH_PV_KEY }}
+        known_hosts: ${{ secrets.KNOWN_HOSTS }}
+        if_key_exists: fail # replace / ignore / fail; optional (defaults to fail)
     - name: add remote repo + Push on Gandi SHS instance
       run: |
         git remote add gandi git+ssh://${{ secrets.GANDI_SHS_USER }}@${{ secrets.GANDI_GIT_HOST }}/default.git
