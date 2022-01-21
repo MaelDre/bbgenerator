@@ -49,7 +49,7 @@ jobs:
     - name: Deploy on Gandi SHS instances deploy git through ssh
       uses: garygrossgarten/github-action-ssh@release
       with:
-        command: deploy default.git
+        command: deploy default.git main
         host: ${{ secrets.GANDI_GIT_HOST }}
         username: ${{ secrets.GANDI_SHS_USER }}
         privateKey: ${{ secrets.SSH_PV_KEY}}
