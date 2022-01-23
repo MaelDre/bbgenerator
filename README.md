@@ -1,6 +1,6 @@
 # BBGenerator
-> Here is a example project to show how it is possible to create a simple CI/CD pipeline and deploy a Flask application on Gandi.net simple hosting thanks to Github actions.
-> Live demo [_here_](https://bbgen.bougetb.fr/).
+Here is a example project to show how it is possible to create a simple CI/CD pipeline and deploy a Flask application on Gandi.net simple hosting thanks to Github actions.
+Live demo [_here_](https://bbgen.bougetb.fr/).
 
 ## Table of Contents
 - [BBGenerator](#bbgenerator)
