@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route("/")
 def generate_buzz():
     page = '<html><body>'
-    page += '<h1>Voici une idée de génie, ou pas.</h1>
+    page += '<h1>Voici une idée de génie, ou pas.</h1>'
     page += '<h2>'
     page += bbgenerator.generate_buzz()
     page += '</h2></body></html>'
