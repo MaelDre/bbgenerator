@@ -1,9 +1,9 @@
-# Project Name
+# BBGenerator
 > Here is a example project to show how it is possible to create a simple CI/CD pipeline and deploy a Flask application on Gandi.net simple hosting thanks to Github actions.
 > Live demo [_here_](https://bbgen.bougetb.fr/).
 
 ## Table of Contents
-- [Project Name](#project-name)
+- [BBGenerator](#bbgenerator)
   - [Table of Contents](#table-of-contents)
   - [General Information](#general-information)
   - [Technologies Used](#technologies-used)
