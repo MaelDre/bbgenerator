@@ -1,6 +1,6 @@
 # BBGenerator
 Here is a example project to show how it is possible to create a simple CI/CD pipeline and deploy a Flask application on Gandi.net simple hosting thanks to Github actions.
-Live demo [_here_](https://bbgen.bougetb.fr/).
+Live demo [_here_](https://bibigen.bougetb.fr/).
 
 ## Table of Contents
 - [BBGenerator](#bbgenerator)
@@ -12,16 +12,12 @@ Live demo [_here_](https://bbgen.bougetb.fr/).
   - [Project Status](#project-status)
   - [Contact](#contact)
   - [License](#license)
-<!-- * [License](#license) -->
+
 
 
 ## General Information
-- Provide general information about your project here.
-- What problem does it (intend to) solve?
-- What is the purpose of your project?
-- Why did you undertake it?
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
-
+This project is a Flask application that just display a random generated (bullshit) baseline for your startup.
+Actually it only intends to details how it is possible to configure a CI/CD pipeline for an application deployed and hosted on a [Gandi Simple Hosting](https://www.gandi.net/en/simple-hosting).
 
 ## Technologies Used
 - Python 3.8
